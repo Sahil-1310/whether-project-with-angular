@@ -1,0 +1,80 @@
+<div class="shadow-lg p-4 mb-2  mt-5 pl-5 bg-dark rounded">
+  
+  <div class="card">
+
+    <div class="form-group text-center">
+      <input type="text" #user placeholder="search" class="form-control form-control-lg" >
+  <button  #enter class="btn btn-danger " (click)="get(user.value)">Submit</button>
+      </div>
+    
+    <div class="card-body">
+      <h5 class="card-title"><strong><h3 ><strong>Wheather Report</strong></h3></strong></h5>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="col-sm-12 text-center">
+            <h2 style="color: blue;">Wheather in {{output.name}},{{output.sys.country}}</h2>
+
+          </div>
+          <div ><strong> Temperature :{{output.main.temp_max-273  }} C</strong> </div>
+          <br>
+
+
+
+
+          <table class="table table-dark table-boardered table-sm">
+            <tbody>
+              <tr>
+                <td>Humidity</td><td>{{output.main.humidity}}%</td>
+              </tr>
+              <tr>
+                <td>Pressure</td><td>{{output.main.pressure}} hpa</td>
+              </tr>
+              <tr>
+                <td>Sunrise</td><td>{{output.sys.sunrise *1000 |date:'H:mm'}} </td>
+              </tr>
+              <tr>
+                <td>Sunset</td><td>{{output.sys.sunset *1000 |date:'H:mm'}} </td>
+              </tr>
+              
+              <tr >
+                <td>Min Temperature</td><td>{{output.main.temp_min }} F </td>
+              </tr>
+              <tr >
+                <td>Wind Speed</td><td>{{output.wind.speed}} m/s </td>
+              </tr>
+              <tr >
+                <td>clouds </td><td>{{output.clouds.all}} % </td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+  </div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+  
+
+  
+  
+  
+  
